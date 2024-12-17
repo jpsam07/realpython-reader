@@ -1,20 +1,20 @@
 name: Lint Python Code
 
 on:
-    pull_request:
-        branches:
-            - master
-    push:
-        branches:
-            - master
-    workflow_dispatch:
+  pull_request:
+    branches:
+      - master
+  push:
+    branches:
+      - master
+  workflow_dispatch:
 
 jobs:
-    lint: # The name of the job
-        runs-on: ubuntu-latest
-        steps:
-            - uses: actions/checkout@v4
-            - uses: actions/setup-python@v5
-                with:
-                    python-version: "3.12"
-                    cache: "pip"
+  lint: # The name of the job
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: "pip"
